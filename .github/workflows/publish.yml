@@ -27,7 +27,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Set up ESP-IDF
+        uses: espressif/setup-esp-idf@v1
+        with:
+          version: 'latest'
       - name: Publish to crates.io
         run: cargo publish --token ${{ secrets.CARGO_REGISTRY_TOKEN }}
       - name: Generate documentation
-        run: cargo doc
+        run: cargo doc --target xtensa-esp32-none-elf
