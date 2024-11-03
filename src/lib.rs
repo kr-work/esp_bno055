@@ -9,8 +9,9 @@ pub use mint;
 #[cfg(feature = "serde")]
 use serde::{Deserialize, Serialize};
 use esp_idf_hal::i2c::I2cDriver;
-use crate::acc_config;
-use crate::regs;
+mod acc_config;
+mod regs;
+mod std_error;
 use std::thread::sleep;
 use std::time::Duration;
 
