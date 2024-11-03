@@ -34,4 +34,4 @@ jobs:
       - name: Publish to crates.io
         run: cargo publish --token ${{ secrets.CARGO_REGISTRY_TOKEN }}
       - name: Generate documentation
-        run: cargo doc --target xtensa-esp32-none-elf
+        run: cargo doc --target xtensa-esp32s3-espidf --no-deps
