@@ -13,7 +13,7 @@ keyword = [
 ]
 
 readme = "README.md"
-license = "LICENSE"
+license-file = "LICENSE"
 
 [profile.release]
 opt-level = "s"
