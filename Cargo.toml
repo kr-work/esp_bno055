@@ -1,5 +1,6 @@
 [package]
 name = "esp_bno055"
+description = "BNO055 9-axis IMU driver to use esp"
 version = "0.1.0"
 authors = ["Ryosuke1218 <81555178+Ryosuke1218@users.noreply.github.com>"]
 edition = "2021"
@@ -12,6 +13,7 @@ keyword = [
 ]
 
 readme = "README.md"
+license = "LICENSE"
 
 [profile.release]
 opt-level = "s"
