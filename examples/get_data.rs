@@ -54,7 +54,7 @@ fn main() -> anyhow::Result<(), AnyError> {
 
     let i2c_driver = I2cDriver::new(i2c, sda, scl, &i2c_config)?;
 
-    let mut imu = bno055::Bno055::new(i2c_driver, false)?;
+    let mut imu = esp_bno055::Bno055::new(i2c_driver, false)?;
     imu.init()?;
     imu.set_mode(BNO055OperationMode::AMG)?;
     let status = imu.get_calibration_status()?;

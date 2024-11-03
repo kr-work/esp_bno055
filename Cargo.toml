@@ -15,6 +15,9 @@ keywords = [
 readme = "README.md"
 license-file = "LICENSE"
 
+[lib]
+harness = false
+
 [profile.release]
 opt-level = "s"
 
