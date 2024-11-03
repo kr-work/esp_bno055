@@ -1,22 +1,10 @@
-use anyhow::Result;
-// use esp_idf_svc::hal::{
-//     delay::{Delay, BLOCK},
-//     gpio::PinDriver,
-//     i2c::{APBTickType, I2cConfig, I2cDriver},
-//     peripherals::{self, Peripherals},
-//     prelude::*,
-// };
 use esp_idf_hal::{
     delay::Delay,
-    gpio::{AnyIOPin, InputPin, OutputPin},
-    i2c::{I2c, I2cConfig, I2cDriver, I2cSlaveConfig, I2cSlaveDriver},
-    peripheral::Peripheral,
+    i2c::{I2cConfig, I2cDriver},
     peripherals::Peripherals,
     prelude::*,
-    units::Hertz,
 };
-use esp_idf_svc::sys::{link_patches, SOC_UART_FIFO_LEN};
-use mint::{EulerAngles, Quaternion, Vector3};
+use esp_idf_svc::sys::link_patches;
 
 fn detect(i2c: &mut I2cDriver) -> Vec<u8> {
     let mut buffer = [0u8; 1];

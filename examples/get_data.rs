@@ -1,4 +1,4 @@
-use bno055::BNO055OperationMode;
+use esp_bno055::BNO055OperationMode;
 use esp_idf_hal::{
     i2c::{I2cConfig, I2cDriver},
     prelude::*,
@@ -10,12 +10,6 @@ use esp_idf_sys as _;
 use esp_idf_svc::sys::link_patches;
 use anyhow::Error as AnyError;
 use mint::Vector3;
-
-mod acc_config;
-mod bno055;
-#[cfg(feature = "std")]
-mod std_error;
-mod regs;
 
 
 #[derive(Debug, Clone, Copy, PartialEq)]
